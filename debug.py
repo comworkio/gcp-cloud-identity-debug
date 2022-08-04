@@ -12,12 +12,15 @@ wait_time = int(os.environ['WAIT_TIME'])
 while True:
     vdate = datetime.now()
     
-    bucket = gcs_client.get_bucket(bucket_name)
-    blob = bucket.blob(file_name)
-    line = "Written at {}".format(vdate.isoformat)
+    try:
+        bucket = gcs_client.bucket(bucket_name)
+        blob = bucket.blob(file_name)
+        line = "Written at {}".format(vdate.isoformat)
 
-    with blob.open(mode='w') as f:
-        f.write(line)
+        with blob.open(mode='w') as f:
+            f.write(line)
+    except Exception as e:
+        print("Unexpected error : {}".format(e))
     
     print(line)
     sleep(wait_time)
