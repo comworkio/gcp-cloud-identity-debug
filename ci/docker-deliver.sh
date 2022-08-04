@@ -3,8 +3,8 @@
 BASE_DIR="$(dirname $0)"
 REPO_PATH="${BASE_DIR}/.."
 
-IMAGE="${2}"
-VERSION="${3}"
+IMAGE="${1}"
+VERSION="${2}"
 
 tag_and_push() {
   docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}"
