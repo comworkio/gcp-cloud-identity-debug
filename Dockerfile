@@ -1,11 +1,11 @@
-FROM python:3-alpine AS debug
+FROM python:3-alpine
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=UTF-8
 
-COPY ./api ./manifest.json /
+COPY ./debug.py ./requirements.txt /
 
 RUN pip3 install --upgrade pip && \
     pip3 install -r /requirements.txt
 
-CMD ["python3", "debug.py"]
+CMD ["python3", "/debug.py"]
