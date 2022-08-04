@@ -1,0 +1,19 @@
+stages:
+  - deliver
+
+api_x86:
+  stage: deliver
+  script:
+    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug" "1.0"
+  only:
+    refs:
+      - /^(main.*)$/
+    changes:
+      - .gitlab-ci.yml
+      - docker-compose.yml
+      - ci/docker-deliver.sh
+      - Dockerfile
+      - debug.py
+      - requirements.txt
+  tags:
+    - imagesbuilder
