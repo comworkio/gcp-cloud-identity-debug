@@ -1,9 +1,8 @@
 version: "3.3"
 
 services: 
-  github-dynamic-changelog:
-    image: comworkio/github-dynamic-changelog:latest
+  gcp-cloud-identity-debug:
+    image: comworkio/gcp-cloud-identity-debug:latest
     build: 
       context: .
       dockerfile: Dockerfile
-

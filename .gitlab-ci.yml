@@ -1,7 +1,7 @@
 stages:
   - deliver
 
-api_x86:
+deliver:
   stage: deliver
   script:
     - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug" "1.0"
