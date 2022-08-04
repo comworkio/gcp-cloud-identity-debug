@@ -15,7 +15,7 @@ while True:
     try:
         bucket = gcs_client.bucket(bucket_name)
         blob = bucket.blob(file_name)
-        line = "Written at {}".format(vdate.isoformat)
+        line = "Written at {}".format(vdate.isoformat())
 
         with blob.open(mode='w') as f:
             f.write(line)
