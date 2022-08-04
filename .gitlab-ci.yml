@@ -4,7 +4,7 @@ stages:
 deliver:
   stage: deliver
   script:
-    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug" "1.0"
+    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug" "1.1"
   only:
     refs:
       - /^(main.*)$/
