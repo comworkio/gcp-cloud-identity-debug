@@ -13,7 +13,7 @@ tag_and_push() {
 
 cd "${REPO_PATH}" && git pull origin main || : 
 
-docker_compose_file="docker-compose-build.yml"
+docker_compose_file="docker-compose.yml"
 
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f "${docker_compose_file}" build "${IMAGE}"
 
