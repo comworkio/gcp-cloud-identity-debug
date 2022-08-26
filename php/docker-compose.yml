@@ -1,0 +1,8 @@
+version: "3.3"
+
+services: 
+  gcp-cloud-identity-debug-php:
+    image: comworkio/gcp-cloud-identity-debug-php:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
