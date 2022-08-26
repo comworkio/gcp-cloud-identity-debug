@@ -6,7 +6,7 @@ from common_utils import is_not_empty
 
 import os
 
-gcp_project = os.getenv('GCP_PROJECT')
+gcp_project = os.getenv('GOOGLE_CLOUD_PROJECT')
 bucket_name = os.environ['GCS_BUCKET_NAME']
 file_name = os.environ['BUCKET_FILENAME']
 wait_time = int(os.environ['WAIT_TIME'])
