@@ -19,7 +19,6 @@ deliver_python:
     refs:
       - /^(main.*)$/
     changes:
-      - .gitlab-ci.yml
       - ci/docker-deliver.sh
       - python/*
   tags:
@@ -33,7 +32,6 @@ deliver_java:
     refs:
       - /^(main.*)$/
     changes:
-      - .gitlab-ci.yml
       - ci/docker-deliver.sh
       - java/*
   tags:
@@ -47,7 +45,19 @@ deliver_php:
     refs:
       - /^(main.*)$/
     changes:
-      - .gitlab-ci.yml
+      - ci/docker-deliver.sh
+      - php/*
+  tags:
+    - imagesbuilder
+
+deliver_node:
+  stage: deliver
+  script:
+    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug-node" "1.0" "node"
+  only:
+    refs:
+      - /^(main.*)$/
+    changes:
       - ci/docker-deliver.sh
       - php/*
   tags:
