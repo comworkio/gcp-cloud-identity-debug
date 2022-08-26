@@ -4,6 +4,7 @@ Some apps for debugging cloud identity (binding IAM role to GKE pods and without
 
 * [Python version](./python)
 * [Java Springboot version](./java)
+* [PHP version](./php)
 
 ## Test locally
 
