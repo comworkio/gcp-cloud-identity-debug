@@ -74,4 +74,5 @@ hs_err_pid*.log
 .env
 
 service-account-file.json
+credentials.json
 src/__pycache__

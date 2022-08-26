@@ -1,0 +1,12 @@
+version: "3.3"
+
+services: 
+  gcp-cloud-identity-debug-py:
+    image: comworkio/gcp-cloud-identity-debug-py:latest
+    env_file:
+      - .env
+    volumes:
+      - ./credentials.json:/credentials.json
+    build: 
+      context: .
+      dockerfile: Dockerfile
