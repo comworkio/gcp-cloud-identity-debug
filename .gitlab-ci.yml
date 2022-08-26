@@ -25,6 +25,20 @@ deliver_python:
   tags:
     - imagesbuilder
 
+deliver_java:
+  stage: deliver
+  script:
+    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug-java" "1.0" "java"
+  only:
+    refs:
+      - /^(main.*)$/
+    changes:
+      - .gitlab-ci.yml
+      - ci/docker-deliver.sh
+      - java/*
+  tags:
+    - imagesbuilder
+
 deliver_php:
   stage: deliver
   script:
@@ -35,6 +49,6 @@ deliver_php:
     changes:
       - .gitlab-ci.yml
       - ci/docker-deliver.sh
-      - python/*
+      - php/*
   tags:
     - imagesbuilder
