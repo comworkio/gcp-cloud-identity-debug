@@ -1,0 +1,21 @@
+{
+    "name": "gcp-cloud-identity-debug-node",
+    "version": "1.0.0",
+    "description": "Node.js cloud identity debug",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "nodejs",
+      "upload",
+      "file",
+      "google cloud storage",
+      "rest api"
+    ],
+    "author": "ineumann",
+    "license": "Apache 2.0",
+    "dependencies": {
+      "@google-cloud/storage": "^6.4.1"
+    }
+  }
