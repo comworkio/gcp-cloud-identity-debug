@@ -10,7 +10,7 @@
 
 	<groupId>io.comwork.gcp.debug</groupId>
 	<artifactId>java-debug</artifactId>
-	<version>1.4</version>
+	<version>1.0</version>
 	
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>

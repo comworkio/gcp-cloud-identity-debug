@@ -10,3 +10,4 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+      target: java_runtime
