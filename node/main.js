@@ -9,8 +9,7 @@ var filename = process.env.BUCKET_FILENAME
 var wait_time = process.env.WAIT_TIME
 
 while(true) {
-    var d = new Date()
-    var line = "Written at " + d.toISOString()
+    var line = "Written at " + new Date().toISOString()
     writeFile(filename, line, { encoding: "utf8", flag: "w" }, function (){})
 
     bucket.upload(filename)

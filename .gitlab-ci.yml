@@ -59,6 +59,6 @@ deliver_node:
       - /^(main.*)$/
     changes:
       - ci/docker-deliver.sh
-      - php/*
+      - node/*
   tags:
     - imagesbuilder
