@@ -5,6 +5,7 @@ REPO_PATH="${BASE_DIR}/.."
 
 IMAGE="${1}"
 VERSION="${2}"
+TECHNO="${3}"
 
 tag_and_push() {
   docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}"
@@ -12,6 +13,7 @@ tag_and_push() {
 }
 
 cd "${REPO_PATH}" && git pull origin main || : 
+cd "${TECHNO}"
 
 docker_compose_file="docker-compose.yml"
 
