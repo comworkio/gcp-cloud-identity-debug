@@ -1,5 +1,6 @@
 {
     "name": "gcp-cloud-identity-debug-node",
+    "type": "module",
     "version": "1.0.0",
     "description": "Node.js cloud identity debug",
     "main": "server.js",
