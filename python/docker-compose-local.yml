@@ -2,7 +2,7 @@ version: "3.3"
 
 services: 
   gcp-cloud-identity-debug-py:
-    image: comworkio/gcp-cloud-identity-debug-php:latest
+    image: comworkio/gcp-cloud-identity-debug-py:latest
     env_file:
       - .env
     volumes:
