@@ -1,0 +1,8 @@
+version: "3.3"
+
+services: 
+  gcp-cloud-identity-debug-node:
+    image: comworkio/gcp-cloud-identity-debug-node:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile

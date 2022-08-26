@@ -11,6 +11,8 @@ local.properties
 .loadpath
 .recommenders
 
+node_modules/
+
 .~lock.cv_en.odt#
 .~lock.cv_fr.odt#
 
