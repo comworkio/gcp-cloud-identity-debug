@@ -6,15 +6,11 @@ from common_utils import is_not_empty
 
 import os
 
-gcp_project = os.getenv('GOOGLE_CLOUD_PROJECT')
 bucket_name = os.environ['GCS_BUCKET_NAME']
 file_name = os.environ['BUCKET_FILENAME']
 wait_time = int(os.environ['WAIT_TIME'])
 
-if is_not_empty(gcp_project):
-    gcs_client = storage.Client(project = gcp_project)
-else:
-    gcs_client = storage.Client()
+gcs_client = storage.Client()
 
 while True:
     vdate = datetime.now()

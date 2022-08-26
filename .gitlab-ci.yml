@@ -14,7 +14,7 @@ mirror:
 deliver_python:
   stage: deliver
   script:
-    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug-py" "1.0" "python"
+    - setsid ./ci/docker-deliver.sh "gcp-cloud-identity-debug-py" "1.1" "python"
   only:
     refs:
       - /^(main.*)$/
