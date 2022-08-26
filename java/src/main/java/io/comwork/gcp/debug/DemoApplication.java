@@ -18,7 +18,7 @@ public class DemoApplication {
 
 		while(true) {
 			String line = String.format("Written at %s", Instant.now());
-			Storage gcs = StorageOptions.newBuilder().setProjectId(System.getenv("GCP_PROJECT")).build().getService();
+			Storage gcs = StorageOptions.getDefaultInstance().getService();
 			BlobInfo blob = BlobInfo.newBuilder(BlobId.of(System.getenv("GCS_BUCKET_NAME"), System.getenv("BUCKET_FILENAME"))).build();
 			gcs.create(blob, line.getBytes(StandardCharsets.UTF_8));
 			System.out.println(line);
